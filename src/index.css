@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 43 30% 90%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 43 30% 90%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 43 30% 90%;
+
+    --primary: 345 60% 25%;
+    --primary-foreground: 43 50% 85%;
+
+    --secondary: 43 60% 50%;
+    --secondary-foreground: 0 0% 4%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 43 10% 55%;
+
+    --accent: 43 60% 50%;
+    --accent-foreground: 0 0% 4%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 43 60% 50%;
+
+    --radius: 0.25rem;
+
+    --burgundy: 345 60% 25%;
+    --burgundy-light: 345 50% 35%;
+    --burgundy-dark: 345 70% 15%;
+    --gold: 43 60% 50%;
+    --gold-light: 43 70% 65%;
+    --gold-dark: 43 50% 35%;
+    --pitch: 0 0% 4%;
+    --pitch-light: 0 0% 10%;
+
+    --font-display: 'Bodoni Moda', serif;
+    --font-body: 'Lato', sans-serif;
+
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 43 30% 90%;
+    --sidebar-primary: 345 60% 25%;
+    --sidebar-primary-foreground: 43 50% 85%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 43 30% 90%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 43 60% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+  .text-gold-light {
+    color: hsl(var(--gold-light));
+  }
+  .bg-burgundy {
+    background-color: hsl(var(--burgundy));
+  }
+  .bg-burgundy-dark {
+    background-color: hsl(var(--burgundy-dark));
+  }
+  .bg-pitch {
+    background-color: hsl(var(--pitch));
+  }
+  .bg-pitch-light {
+    background-color: hsl(var(--pitch-light));
+  }
+  .border-gold {
+    border-color: hsl(var(--gold));
+  }
+  .border-gold\/20 {
+    border-color: hsl(var(--gold) / 0.2);
+  }
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)), hsl(var(--gold-light)));
+  }
+  .gradient-burgundy {
+    background: linear-gradient(135deg, hsl(var(--burgundy-dark)), hsl(var(--burgundy)));
+  }
+  .text-shadow-gold {
+    text-shadow: 0 0 40px hsl(var(--gold) / 0.3);
+  }
+}
